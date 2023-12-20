@@ -32,13 +32,14 @@ function removeStyleProperties(obj) {
 const init = function () {
   document.addEventListener("paste", function (event) {
     event.preventDefault();
-    var pastedText = (event.clipboardData || window.clipboardData).getData(
+
+    let pastedText = (event.clipboardData || window.clipboardData).getData(
       "text"
-    );
+    ).setData('');
     const jsonObject = JSON.parse(pastedText);
     const removeInObject = removeStyleLess(jsonObject);
     const updatedText = removeStyleProperties(removeInObject);
-    event.target.value = JSON.stringify(updatedText);
+    event.target.value = updatedText;
   });
 };
 init();
