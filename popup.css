@@ -1,0 +1,28 @@
+body {
+    min-width: 200px;
+    max-width: 250px;
+    background-color: black;
+    color: #fff;
+    padding: 2px;
+  }
+  
+  h1 {
+    font-size: 16px;
+    text-align: left;
+    padding-left: 8px;
+  }
+  
+  p {
+    color: #ccc;
+    font-size: 12px;
+    padding-top: 12px;
+    padding-right: 12px;
+    text-align: right;
+  }
+  
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
